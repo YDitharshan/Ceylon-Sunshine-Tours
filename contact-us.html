@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/contact-us.css">
+
+  <title>Contact Us - Ceylon Sunshine Tours</title>
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="assets/images/logo1.png" alt="Ceylon Sunshine Tours" class="header__logo-img">
+        </a>
+      </div>
+
+      <div class="header__right">
+        <div class="top__bar">
+          <div class="top__bar-left">
+            <span><i class="ri-map-pin-line"></i>Vipulanda Street, Pethalai, Batticaloa.</span>
+            <span><i class="ri-mail-line"></i>ceylonsunshinetours@gmail.com</span>
+          </div>
+
+          <div class="top__bar-right">
+            <div class="top__bar-icons">
+              <i class="ri-facebook-circle-fill"></i>
+              <i class="ri-twitter-fill"></i>
+              <i class="ri-instagram-fill"></i>
+              <i class="ri-pinterest-fill"></i>
+            </div>
+          </div>
+        </div>
+
+        <nav class="main__nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="sigiriya-dambulla-package-details.html" class="nav__link">Tours</a></li>
+            <li class="nav__item"><a href="index.html#destination" class="nav__link">Destination</a></li>
+            <li class="nav__item"><a href="index.html#nature" class="nav__link">Activities</a></li>
+            <li class="nav__item"><a href="about-us.html" class="nav__link">About Us</a></li>
+            <li class="nav__item"><a href="contact-us.html" class="nav__link nav__link--active">Contact</a></li>
+          </ul>
+
+          <div class="right-content">
+            <div class="phone">
+              <i class="ri-phone-fill"></i>
+              <div class="phone__text">
+                <span>Call Anytime</span>
+                <strong class="phone__number">+94 76 758 5529</strong>
+              </div>
+            </div>
+            <a href="#contactFormSection" class="btn">Talk To Us</a>
+          </div>
+
+          <button class="menu-icon" id="menu-icon" type="button" aria-label="Open menu">
+            <i class="ri-menu-3-fill"></i>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="slidbar__header">
+        <div class="sidebar__logo">
+          <img src="assets/images/logo2.png" alt="Ceylon Sunshine Tours" class="sidebar__logo-img">
+        </div>
+        <button class="close-icon" id="close-icon" type="button" aria-label="Close menu">
+          <i class="ri-close-fill"></i>
+        </button>
+      </div>
+
+      <ul class="sidebar__list">
+        <li class="sidebar__item"><a href="index.html" class="sidebar__link">Home</a></li>
+        <li class="sidebar__item"><a href="sigiriya-dambulla-package-details.html" class="sidebar__link">Tours</a></li>
+        <li class="sidebar__item"><a href="index.html#destination" class="sidebar__link">Destination</a></li>
+        <li class="sidebar__item"><a href="index.html#nature" class="sidebar__link">Activities</a></li>
+        <li class="sidebar__item"><a href="about-us.html" class="sidebar__link">About Us</a></li>
+        <li class="sidebar__item"><a href="contact-us.html" class="sidebar__link">Contact</a></li>
+      </ul>
+
+      <div class="sidebar__socials">
+        <i class="ri-facebook-circle-fill"></i>
+        <i class="ri-twitter-fill"></i>
+        <i class="ri-instagram-fill"></i>
+        <i class="ri-pinterest-fill"></i>
+      </div>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-hero section">
+      <div class="contact-hero__container">
+        <div>
+          <div class="topic"><i class="topic__icon ri-customer-service-2-line"></i> Contact Us</div>
+          <h1 class="heading contact-hero__title">Let Us Plan Your Perfect,<br> Sri Lanka Tour</h1>
+          <p class="description contact-hero__desc">
+            Send us your travel dates, group size, and preferred destinations. Our team will reply with a personalized itinerary and best quotation.
+          </p>
+        </div>
+        <img src="assets/images/hero.png" alt="Travel support" class="contact-hero__image">
+      </div>
+    </section>
+
+    <section class="contact-cards section">
+      <div class="contact-cards__container">
+        <article class="contact-card">
+          <i class="ri-phone-line"></i>
+          <h3>Call Us</h3>
+          <p>+94 76 758 5529</p>
+        </article>
+
+        <article class="contact-card">
+          <i class="ri-mail-line"></i>
+          <h3>Email</h3>
+          <p>ceylonsunshinetours@gmail.com</p>
+        </article>
+
+        <article class="contact-card">
+          <i class="ri-map-pin-line"></i>
+          <h3>Office</h3>
+          <p>Vipulanda Street, Pethalai, Batticaloa</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-main section" id="contactFormSection">
+      <div class="contact-main__container">
+        <div class="contact-form-wrap">
+          <h2 class="heading contact-form-wrap__title">Send Your Tour Request</h2>
+          <p class="description">We usually respond within a few hours.</p>
+
+          <form id="contactForm" class="contact-form">
+            <div class="contact-form__grid">
+              <div class="contact-form__group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+              </div>
+
+              <div class="contact-form__group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+
+              <div class="contact-form__group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+94 77 123 4567" required>
+              </div>
+
+              <div class="contact-form__group">
+                <label for="tourType">Interested Tour</label>
+                <select id="tourType" name="tourType" required>
+                  <option value="">Select a package</option>
+                  <option value="Sigiriya & Dambulla">Sigiriya & Dambulla</option>
+                  <option value="Ella">Ella</option>
+                  <option value="Trincomalee">Trincomalee</option>
+                  <option value="Jaffna">Jaffna</option>
+                  <option value="Custom Tour">Custom Tour</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="travelDate">Preferred Travel Date</label>
+              <input type="date" id="travelDate" name="travelDate" required>
+            </div>
+
+            <div class="contact-form__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us your group size, hotel level, and places you want to visit." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send via WhatsApp</button>
+            <p class="contact-form__note">By submitting, you agree to be contacted by our team.</p>
+          </form>
+        </div>
+
+        <aside class="contact-side">
+          <div class="contact-side__box">
+            <h3>Business Hours</h3>
+            <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
+            <p>Sunday: 9:00 AM - 5:00 PM</p>
+          </div>
+
+          <div class="contact-side__box">
+            <h3>Need Quick Help?</h3>
+            <p>For urgent travel planning, message us directly and we will assist quickly.</p>
+            <a href="https://wa.me/94767585529" target="_blank" rel="noopener" class="contact-side__wa">
+              <i class="ri-whatsapp-line"></i> Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-side__box">
+            <h3>Popular Pickup Areas</h3>
+            <ul>
+              <li>Colombo</li>
+              <li>Batticaloa</li>
+              <li>Kandy</li>
+              <li>Negombo</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="map section">
+      <div class="map__box">
+        <h2 class="heading">Our Location</h2>
+        <p class="description">Visit our office or meet us online to plan your trip.</p>
+        <div class="map__embed">
+          <iframe
+            title="Ceylon Sunshine Tours Location"
+            src="https://maps.google.com/maps?q=Batticaloa%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer" style="background-image: url(assets/images/footer-bg.png);">
+    <div class="footer__header">
+      <div class="footer__logo">
+        <img src="assets/images/logo1.png" alt="Ceylon Sunshine Tours logo">
+      </div>
+      <div class="social__icons">
+        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+        <a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+      </div>
+    </div>
+
+    <div class="footer__columns">
+      <div class="footer__col">
+        <h4 class="footer__col-head">Company</h4>
+        <ul>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="index.html#destination">Destinations</a></li>
+          <li><a href="index.html#nature">Activities</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-head">Tours</h4>
+        <ul>
+          <li><a href="sigiriya-dambulla-package-details.html">Sigiriya & Dambulla</a></li>
+          <li><a href="tour-ella-package-details.html">Ella</a></li>
+          <li><a href="trinco-package-details.html">Trincomalee</a></li>
+          <li><a href="jaffna-package-details.html">Jaffna</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__col-head">Contact</h4>
+        <div class="contact__info">
+          <p><i class="ri-map-pin-line"></i>Vipulanda Street, Pethalai, Batticaloa</p>
+          <p><i class="ri-phone-line"></i>+94 76 758 5529</p>
+          <p><i class="ri-mail-line"></i>ceylonsunshinetours@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer__col newsletter__box">
+        <h4 class="footer__col-head">Signup for our latest tours</h4>
+        <form id="contactNewsletterForm">
+          <input type="email" id="contactNewsletterEmail" placeholder="Email address" required>
+          <button type="submit"><i class="ri-arrow-right-line"></i></button>
+        </form>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" required>
+            I agree to the privacy policy
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      &copy; 2026 Ceylon Sunshine Tours. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/contact-us.js"></script>
+</body>
+</html>
