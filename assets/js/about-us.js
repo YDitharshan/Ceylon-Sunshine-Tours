@@ -53,4 +53,49 @@
       newsletterForm.reset();
     });
   }
+
+  if (typeof ScrollReveal === "function") {
+    const sr = ScrollReveal({
+      distance: "150px",
+      duration: 1000,
+      easing: "ease-out",
+      reset: false
+    });
+
+    sr.reveal(".header__logo, .top__bar, .main__nav, .topic, .footer__columns", {
+      origin: "top",
+      interval: 100
+    });
+
+    sr.reveal(".about-hero__content, .why-us__content", {
+      origin: "left",
+      interval: 120
+    });
+
+    sr.reveal(".about-hero__images, .why-us__visual", {
+      origin: "right",
+      interval: 120
+    });
+
+    sr.reveal(".why-us__highlight, .why-us__feature, .why-us__stat", {
+      origin: "bottom",
+      interval: 90,
+      delay: 150
+    });
+
+    sr.reveal(".stats__intro, .stats__card, .values__intro, .values__card", {
+      origin: "bottom",
+      interval: 100
+    });
+
+    sr.reveal(".guide-details__heading, .guide-card, .about-cta__box", {
+      origin: "bottom",
+      interval: 100
+    });
+
+    sr.reveal(".about-hero__actions .btn, .about-hero__text-link, .about-cta__box .btn, .description", {
+      origin: "bottom",
+      interval: 80
+    });
+  }
 })();

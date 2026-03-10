@@ -70,4 +70,39 @@
       newsletterForm.reset();
     });
   }
+
+  if (typeof ScrollReveal === "function") {
+    const sr = ScrollReveal({
+      distance: "150px",
+      duration: 1000,
+      easing: "ease-out",
+      reset: false
+    });
+
+    sr.reveal(".header__logo, .top__bar, .main__nav, .topic, .footer__columns", {
+      origin: "top",
+      interval: 100
+    });
+
+    sr.reveal(".contact-hero__content, .contact-form-wrap", {
+      origin: "left",
+      interval: 120
+    });
+
+    sr.reveal(".contact-hero__visual, .contact-side, .map__embed", {
+      origin: "right",
+      interval: 120
+    });
+
+    sr.reveal(".contact-card, .contact-side__box, .contact-form__group, .contact-form__note", {
+      origin: "bottom",
+      interval: 90,
+      delay: 140
+    });
+
+    sr.reveal(".contact-hero__highlights span, .contact-form .btn, .contact-side__wa, .description", {
+      origin: "bottom",
+      interval: 80
+    });
+  }
 })();

@@ -26,6 +26,7 @@
 
 .about-hero__desc {
   max-width: 580px;
+  overflow-wrap: anywhere;
 }
 
 .about-hero__actions {
@@ -138,6 +139,7 @@
 .why-us__highlight p {
   color: var(--text-color-light);
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .why-us__features {
@@ -168,6 +170,7 @@
 .why-us__feature p {
   color: var(--text-color-light);
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .why-us__visual {
@@ -526,6 +529,7 @@
   color: var(--text-color-light);
   line-height: 1.6;
   margin-bottom: 10px;
+  overflow-wrap: anywhere;
 }
 
 .guide-card__meta {
@@ -800,5 +804,108 @@
 
   .guide-card__img {
     height: 230px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    padding-top: 32px;
+  }
+
+  .about-hero__actions {
+    gap: 12px;
+  }
+
+  .about-hero__actions .btn,
+  .about-hero__text-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-hero__images {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: end;
+  }
+
+  .about-hero__img--large {
+    grid-column: 1 / -1;
+    max-width: none;
+    height: 250px;
+  }
+
+  .about-hero__img--small {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 150px;
+    border-width: 4px;
+  }
+
+  .about-hero__img--icon {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 70px;
+    justify-self: end;
+  }
+
+  .why-us__content {
+    padding: 18px;
+  }
+
+  .why-us__visual {
+    padding: 14px;
+  }
+
+  .why-us__collage {
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .why-us__img--main {
+    height: 220px;
+  }
+
+  .why-us__img--overlay {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 140px;
+    right: auto;
+    bottom: auto;
+    margin-top: 10px;
+    transform: none;
+  }
+
+  .why-us__pill {
+    position: static;
+    margin-top: 8px;
+  }
+
+  .stats,
+  .values,
+  .guide-details {
+    width: calc(100% - 16px);
+    padding: 22px 12px;
+  }
+
+  .about-cta__box {
+    padding: 24px 14px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .why-us__pill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .values__card {
+    padding: 18px;
   }
 }
