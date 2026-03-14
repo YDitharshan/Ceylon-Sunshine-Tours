@@ -592,6 +592,20 @@
   background: var(--section-bg);
 }
 
+/* ====================
+   MEMORIES SECTION BORDER
+==================== */
+
+.memories{
+  background: #fff5f0;
+  border: 8px solid #ffffff;
+  border-radius: 25px;
+  padding: 80px 60px;
+  margin: 60px auto;
+  max-width: 1400px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
 .memories__intro {
   max-width: 600px;
   position: relative;
