@@ -1178,6 +1178,27 @@
   display: block;
 }
 
+.destination__bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.destination__price-btn{
+  background: #f6d8c8;
+  color: #ff7a00;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.destination__price-btn:hover{
+  background: #ff7a00;
+  color: white;
+}
+
 /* ====================
       testimonial
 ==================== */
