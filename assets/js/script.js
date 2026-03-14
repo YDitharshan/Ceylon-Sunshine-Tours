@@ -118,3 +118,23 @@ sr.reveal('.topic, .footer__columns', {
   origin: 'top',
   interval: 100,  
 });
+
+/*=============== HERO FILTER PACKAGE REDIRECT ===============*/
+
+const heroFilterForm = document.querySelector(".hero-filter__form");
+const heroPackage = document.getElementById("hero-package");
+
+if (heroFilterForm && heroPackage) {
+  heroFilterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const selectedPackagePage = heroPackage.value;
+
+    if (!selectedPackagePage) {
+      alert("Please select a package.");
+      return;
+    }
+
+    window.location.href = selectedPackagePage;
+  });
+}
