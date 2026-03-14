@@ -178,124 +178,59 @@
       ====================-->
 
 
-      <section class="home section" id="home">
+ <section class="home section" id="home">
+  <div class="home__overlay"></div>
+
   <div class="home__content">
-    <!-- Left Content -->
-    <div class="home__text">
-      <div class="home__subtitle">
-        <span class="home__subtitle-text">Explore Your Next Vacation</span>
-      </div>
+    <div class="home__hero">
+      <span class="home__badge">Explore Sri Lanka</span>
 
       <h1 class="home__title">
-        Explore <span class="home__title-orange"><br>Sri Lanka</span>
+        We welcome you to <br>
+        <span class="home__title-accent">Sri Lanka!</span>
       </h1>
 
       <p class="home__desc">
-        Discover beautiful destinations, unforgettable adventures, and travel
-        experiences designed to create lifelong memories.
+        Discover beaches, mountains, waterfalls, wildlife, ancient cities and unforgettable experiences across the island.
       </p>
-
-      <button class="btn hero__btn">Booking Now</button>
     </div>
 
-    <!-- Right Image -->
-    <div class="home__image">
-      <img src="assets/images/map.webp" alt="World map background" class="home__image-map">
-      <img src="assets/images/testimonial__img-4.png" alt="Flying airplane illustration" class="home__image-plane">
-      <img src="assets/images/hero.png" alt="Traveler ready for vacation" class="home__image-girl">
-      <img src="assets/images/birds.png" alt="Decorative birds" class="home__image-birds">
-      <img src="assets/images/icon.webp" alt="Travel decoration icon" class="home__image-icon">
-    </div>
-  </div>
+    <div class="home__booking-box">
+      <h3 class="home__booking-title">Book your trip now</h3>
 
-  <!-- Booking Buttons -->
-  <div class="booking__buttons">
-    <div class="booking__item">
-      <div class="booking__icon-wrapper">
-        <i class="ri-hotel-bed-line booking-icon"></i>
-      </div>
-      <button class="booking-btn">Hotel Booking</button>
-    </div>
-
-    <div class="booking__item">
-      <div class="booking__icon-wrapper">
-        <i class="ri-flight-takeoff-line booking-icon"></i>
-      </div>
-      <button class="booking-btn">Flight Booking</button>
-    </div>
-
-    <div class="booking__item">
-      <div class="booking__icon-wrapper">
-        <i class="ri-calendar-line booking-icon"></i>
-      </div>
-      <button class="booking-btn">Trip Organizer</button>
-    </div>
-
-    <div class="booking__item">
-      <div class="booking__icon-wrapper">
-        <i class="ri-pass-valid-line booking-icon"></i>
-      </div>
-      <button class="booking-btn">Passport Services</button>
-    </div>
-  </div>
-
-  <!-- Search Box -->
-  <div class="search__box">
-    <div class="search__field">
-      <i class="ri-map-pin-line search-icon"></i>
-      <div class="search__text">
-        <small class="search__label">Location</small>
-        <select class="select">
-          <option>France</option>
-          <option>Italy</option>
-          <option>Japan</option>
-          <option>Pakistan</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="search__field">
-      <i class="ri-walk-line search-icon"></i>
-      <div class="search__text">
-        <small class="search__label">Type</small>
-        <select class="select">
-          <option>Nature</option>
-          <option>Hiking</option>
-          <option>Beach Tour</option>
-          <option>City Exploration</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="search__field">
-      <i class="ri-calendar-line search-icon"></i>
-      <div class="search__text">
-        <small class="search__label">Duration</small>
-        <select class="select">
-          <option>1 Day</option>
-          <option>2 Day</option>
-          <option>3 Day</option>
-          <option>1 Week</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="search__field" id="priceField">
-      <i class="ri-wallet-3-line search-icon"></i>
-      <div class="search__text">
-        <small class="search__label">Price</small>
-        <div class="price-display">$ <span id="min-price">165</span> - $ <span id="max-price">359</span></div>
-      </div>
-
-      <div class="price-dropdown">
-        <div class="range__slider">
-          <input type="range" id="minRange" min="50" max="500" value="165" step="1">
-          <input type="range" id="maxRange" min="50" max="500" value="359" step="1">
+      <form class="home__filter-form">
+        <div class="home__filter-item">
+          <label for="tour-date">Select Tour Date</label>
+          <input type="date" id="tour-date" class="home__input">
         </div>
-      </div>
-    </div>
 
-    <button class="search-btn">Search</button>
+        <div class="home__filter-item">
+          <label for="tour-persons">Number of Persons</label>
+          <select id="tour-persons" class="home__select">
+            <option value="1">1 Person</option>
+            <option value="2">2 Persons</option>
+            <option value="3">3 Persons</option>
+            <option value="4">4 Persons</option>
+            <option value="5">5+ Persons</option>
+          </select>
+        </div>
+
+        <div class="home__filter-item">
+          <label for="package-type">Package Type</label>
+          <select id="package-type" class="home__select">
+            <option value="adventure">Adventure</option>
+            <option value="beach">Beach Tour</option>
+            <option value="cultural">Cultural Tour</option>
+            <option value="wildlife">Wildlife Safari</option>
+            <option value="honeymoon">Honeymoon Package</option>
+          </select>
+        </div>
+
+        <button type="submit" class="home__search-btn" aria-label="Search package">
+          <i class="ri-search-line"></i>
+        </button>
+      </form>
+    </div>
   </div>
 </section>
  

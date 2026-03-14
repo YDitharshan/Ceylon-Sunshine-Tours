@@ -58,229 +58,91 @@
 
 @media (max-width: 1200px) {
   .home {
-    padding: 60px 30px 40px !important;
+    min-height: 86vh;
+    padding: 60px 24px 36px !important;
   }
 
-  .home__title {
-    font-size: 5rem;
+  .home__booking-box {
+    width: min(900px, 100%);
   }
 
-  .booking__buttons {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .search__box {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .search-btn {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 992px) {
-  .home {
-    padding: 50px 24px 40px !important;
-  }
-
-  .home__content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .home__text {
-    max-width: 100%;
-  }
-
-  .home__subtitle {
-    justify-content: center;
-    font-size: 1.5rem;
-  }
-
-  .home__desc {
-    max-width: 100%;
-    margin-inline: auto;
-  }
-
-  .hero__btn {
-    font-size: 1rem;
-  }
-
-  .home__image {
-    min-height: 420px;
-    width: 100%;
-  }
-
-  .home__image-map {
-    width: 80%;
-  }
-
-  .home__image-girl {
-    max-width: 420px;
-  }
-
-  .home__image-plane {
-    width: 140px;
-    left: 20px;
-    top: 60px;
-  }
-
-  .home__image-birds {
-    width: 90px;
-    right: 30px;
-    top: 50px;
-  }
-
-  .booking__buttons {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 20px;
-  }
-
-  .search__box {
+  .home__filter-form {
     grid-template-columns: 1fr 1fr;
   }
 
-  .search-btn {
-    grid-column: span 2;
+  .home__search-btn {
+    width: 100%;
+    border-radius: 999px;
   }
 }
 
 @media (max-width: 768px) {
   .home {
-    padding: 40px 20px 30px !important;
+    min-height: auto;
+    padding: 50px 16px 30px !important;
+  }
+
+  .home__content {
+    gap: 28px;
+  }
+
+  .home__badge {
+    margin-bottom: 16px;
   }
 
   .home__title {
-    font-size: 4rem;
-  }
-
-  .home__subtitle {
-    font-size: 1.2rem;
+    font-size: 2.7rem;
   }
 
   .home__desc {
     font-size: 1rem;
+    line-height: 1.7;
   }
 
-  .hero__btn {
-    width: auto;
-    min-width: 160px;
+  .home__booking-box {
+    padding: 20px 16px;
+    border-radius: 22px;
   }
 
-  .home__image {
-    min-height: 340px;
+  .home__booking-title {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
   }
 
-  .home__image-girl {
-    max-width: 320px;
-  }
-
-  .home__image-map {
-    width: 90%;
-  }
-
-  .home__image-plane {
-    width: 110px;
-    top: 45px;
-    left: 10px;
-  }
-
-  .home__image-birds {
-    width: 70px;
-    top: 30px;
-    right: 20px;
-  }
-
-  .home__image-icon {
-    width: 90px;
-    bottom: 15px;
-    left: 10px;
-  }
-
-  .booking__buttons {
+  .home__filter-form {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .search__box {
-    grid-template-columns: 1fr;
-    padding: 18px;
+  .home__input,
+  .home__select {
+    height: 50px;
+    border-radius: 16px;
   }
 
-  .search__field {
-    border-right: none;
-    border-bottom: 1px solid var(--light-gray-color);
-    padding-right: 0;
-    padding-bottom: 12px;
-  }
-
-  .search__field:last-of-type {
-    border-bottom: none;
-  }
-
-  .search-btn {
-    grid-column: auto;
+  .home__search-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .home {
-    padding: 35px 16px 25px !important;
+    padding: 42px 14px 24px !important;
   }
 
   .home__title {
-    font-size: 3rem;
-  }
-
-  .home__subtitle {
-    font-size: 1rem;
+    font-size: 2.2rem;
   }
 
   .home__desc {
     font-size: 0.95rem;
-    margin-bottom: 20px;
   }
 
-  .home__image {
-    min-height: 280px;
-  }
-
-  .home__image-girl {
-    max-width: 260px;
-  }
-
-  .home__image-map {
-    width: 95%;
-  }
-
-  .home__image-plane {
-    width: 85px;
-    top: 35px;
-    left: 5px;
-  }
-
-  .home__image-birds {
-    width: 55px;
-    top: 18px;
-    right: 10px;
-  }
-
-  .home__image-icon {
-    display: none;
-  }
-
-  .booking-btn {
-    font-size: 14px;
-    padding: 14px 14px 14px 52px;
-  }
-
-  .booking-icon {
-    padding: 10px;
-    font-size: 1rem;
-  }
-
-  .search__box {
-    border-radius: 14px;
+  .home__booking-box {
+    border-radius: 18px;
+    padding: 16px 14px;
   }
 }
 /* ====================
