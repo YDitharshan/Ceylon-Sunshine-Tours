@@ -297,7 +297,7 @@
   justify-content: center;
   background:
     linear-gradient(rgba(8, 29, 54, 0.32), rgba(8, 29, 54, 0.32)),
-    url("../images/sri-lanka-hero.png") center/cover no-repeat;
+    url("../images/sri-lanka-hero.jpg") center/cover no-repeat;
 }
 
 .home__overlay {
