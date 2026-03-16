@@ -1084,6 +1084,13 @@
   font-size: var(--large-font-size);
 }
 
+.destination__tour-start{
+  font-size: 13px;
+  color: #777;
+  margin: 6px 0 10px 0;
+  font-weight: 500;
+}
+
 /* Shared search box for destination section */
 .search__box {
   display: flex;
