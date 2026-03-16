@@ -54,7 +54,7 @@ if (bookingForm) {
       return;
     }
 
-    const phoneNumber = "94767585529";
+    const phoneNumber = "94761549030";
 
     const message =
       `Hello Travilia, I want to book a tour.\n\n` +
