@@ -15,6 +15,63 @@ function setButtonLanguage(lang) {
   langBtn.textContent = languageMap[lang] || "🌐 EN";
 }
 
+function forceTranslatedSectionsVisible() {
+  document.body.classList.add("translated-mode");
+
+  const revealTargets = document.querySelectorAll(`
+    .home__badge,
+    .home__title,
+    .home__desc,
+    .hero-filter,
+    .about__content,
+    .about__images,
+    .destinatio__intro,
+    .destination__card,
+    .memories__intro,
+    .memories__images-box,
+    .memories__activities,
+    .features__left,
+    .features__card-wrapper,
+    .nature__intro,
+    .nature__card,
+    .guide-details__heading,
+    .guide-card,
+    .testimonial__left,
+    .testimonial__right,
+    .promo__text,
+    .footer__header,
+    .footer__col
+  `);
+
+  revealTargets.forEach((el) => {
+    el.style.opacity = "1";
+    el.style.visibility = "visible";
+    el.style.transform = "none";
+    el.style.filter = "none";
+  });
+}
+
+function applyLanguage(lang) {
+  const select = document.querySelector(".goog-te-combo");
+
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event("change"));
+
+    if (lang !== "en") {
+      setTimeout(() => {
+        forceTranslatedSectionsVisible();
+      }, 1200);
+    } else {
+      document.body.classList.remove("translated-mode");
+    }
+
+    return true;
+  }
+
+  return false;
+}
+
 if (langToggle && langFloating) {
   langToggle.addEventListener("click", () => {
     langFloating.classList.toggle("active");
@@ -25,20 +82,16 @@ langItems.forEach((item) => {
   item.addEventListener("click", () => {
     const lang = item.getAttribute("data-lang");
 
-    /* change button immediately */
     setButtonLanguage(lang);
-
-    /* save selected language */
     localStorage.setItem("selectedLanguage", lang);
 
-    /* apply translation */
-    const tryTranslate = setInterval(() => {
-      const select = document.querySelector(".goog-te-combo");
+    let attempts = 0;
+    const timer = setInterval(() => {
+      const done = applyLanguage(lang);
+      attempts++;
 
-      if (select) {
-        select.value = lang;
-        select.dispatchEvent(new Event("change"));
-        clearInterval(tryTranslate);
+      if (done || attempts > 20) {
+        clearInterval(timer);
       }
     }, 500);
 
@@ -46,26 +99,24 @@ langItems.forEach((item) => {
   });
 });
 
-/* close dropdown when clicking outside */
 document.addEventListener("click", (e) => {
   if (langFloating && !langFloating.contains(e.target)) {
     langFloating.classList.remove("active");
   }
 });
 
-/* restore selected language on page load */
 window.addEventListener("load", () => {
   const savedLang = localStorage.getItem("selectedLanguage") || "en";
   setButtonLanguage(savedLang);
 
   if (savedLang !== "en") {
-    const tryTranslate = setInterval(() => {
-      const select = document.querySelector(".goog-te-combo");
+    let attempts = 0;
+    const timer = setInterval(() => {
+      const done = applyLanguage(savedLang);
+      attempts++;
 
-      if (select) {
-        select.value = savedLang;
-        select.dispatchEvent(new Event("change"));
-        clearInterval(tryTranslate);
+      if (done || attempts > 20) {
+        clearInterval(timer);
       }
     }, 500);
   }

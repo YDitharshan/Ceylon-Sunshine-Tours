@@ -1,4 +1,37 @@
 /* ====================
+   TRANSLATION MODE FIX
+==================== */
+
+body.translated-mode .home__badge,
+body.translated-mode .home__title,
+body.translated-mode .home__desc,
+body.translated-mode .hero-filter,
+body.translated-mode .about__content,
+body.translated-mode .about__images,
+body.translated-mode .destinatio__intro,
+body.translated-mode .destination__card,
+body.translated-mode .memories__intro,
+body.translated-mode .memories__images-box,
+body.translated-mode .memories__activities,
+body.translated-mode .features__left,
+body.translated-mode .features__card-wrapper,
+body.translated-mode .nature__intro,
+body.translated-mode .nature__card,
+body.translated-mode .guide-details__heading,
+body.translated-mode .guide-card,
+body.translated-mode .testimonial__left,
+body.translated-mode .testimonial__right,
+body.translated-mode .promo__text,
+body.translated-mode .footer__header,
+body.translated-mode .footer__col {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+
+/* ====================
    FLOATING LANGUAGE BUTTON
 ==================== */
 
