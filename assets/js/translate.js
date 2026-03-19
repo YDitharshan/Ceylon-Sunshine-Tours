@@ -54,22 +54,23 @@ function forceTranslatedSectionsVisible() {
 function applyLanguage(lang) {
   const select = document.querySelector(".goog-te-combo");
 
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
+  if (!select) return false;
 
-    if (lang !== "en") {
-      setTimeout(() => {
-        forceTranslatedSectionsVisible();
-      }, 1200);
-    } else {
-      document.body.classList.remove("translated-mode");
-    }
-
+  if (lang === "en") {
+    // Reset to English (IMPORTANT FIX)
+    document.cookie = "googtrans=/en/en;path=/";
+    location.reload(); // reload page to remove translation
     return true;
   }
 
-  return false;
+  select.value = lang;
+  select.dispatchEvent(new Event("change"));
+
+  setTimeout(() => {
+    forceTranslatedSectionsVisible();
+  }, 1200);
+
+  return true;
 }
 
 if (langToggle && langFloating) {
