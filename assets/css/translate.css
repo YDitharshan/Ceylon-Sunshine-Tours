@@ -1,0 +1,113 @@
+/* ====================
+   FLOATING LANGUAGE BUTTON
+==================== */
+
+.lang-floating{
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 9999;
+}
+
+.lang-btn{
+  background: var(--orange-color);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 92px;
+  justify-content: center;
+}
+
+.lang-btn:hover{
+  background: var(--hover-color);
+}
+
+.lang-dropdown{
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 12px);
+  top: auto;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  list-style: none;
+  padding: 8px 0;
+  width: 190px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.lang-floating.active .lang-dropdown{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-dropdown li{
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #222;
+  background: #fff;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.lang-dropdown li:hover{
+  background: #f5f5f5;
+  color: var(--orange-color);
+}
+
+/* Hidden Google widget */
+#google_translate_element{
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hide Google top bar */
+.goog-te-banner-frame.skiptranslate{
+  display: none !important;
+}
+
+body{
+  top: 0 !important;
+}
+
+.goog-logo-link{
+  display: none !important;
+}
+
+.goog-te-gadget{
+  font-size: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .lang-floating{
+    right: 14px;
+    bottom: 90px;
+  }
+
+  .lang-dropdown{
+    width: 180px;
+  }
+
+  .lang-btn{
+    padding: 9px 14px;
+    font-size: 14px;
+    min-width: 86px;
+  }
+}

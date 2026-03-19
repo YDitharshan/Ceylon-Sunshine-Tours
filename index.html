@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link rel="stylesheet" href="assets/css/about-us.css">
+  <link rel="stylesheet" href="assets/css/translate.css">
 
   <!--=============== TITLE ===============-->
   <script type="application/ld+json">
@@ -73,6 +74,21 @@
       </div>
 
       <div class="header__right">
+
+              <div class="lang-floating">
+                <button class="lang-btn" id="langToggle">
+                  🌐 EN
+                </button>
+
+                <ul class="lang-dropdown" id="langDropdown">
+                  <li data-lang="fr">🇫🇷 Français</li>
+                  <li data-lang="de">🇩🇪 Deutsch</li>
+                  <li data-lang="ru">🇷🇺 Русский</li>
+                </ul>
+              </div>
+
+              <div id="google_translate_element"></div>
+
         <div class="top__bar">
           <div class="top__bar-left">
             <span><i class="ri-map-pin-line"></i>Vipulananda Street, Pethalai, Batticaloa</span>
@@ -161,8 +177,7 @@
          </a>
 
           <a href="https://www.instagram.com/ceylon_sunshine_tours/" target="_blank">
-          <i class="ri-instagram-fill"></i>
-          </a>
+          <i class="ri-instagram-fill"></i></a>
       </div>
     </div>
   </header>
@@ -752,6 +767,19 @@
       © 2026 Copyrights by Ceylon Sunshine Tours. Design and Developed by Luna Tech.
     </div>
   </footer>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "en",
+    includedLanguages: "fr,de,ru",
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="assets/js/translate.js"></script>
 
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
