@@ -174,4 +174,5 @@ window.addEventListener("load", () => {
     interval: 120,
     delay: 150
   });
+  
 });

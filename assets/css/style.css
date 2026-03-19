@@ -185,6 +185,75 @@
   color: var(--text-color);
 }
 
+/* LANGUAGE SWITCHER */
+
+.lang-switcher{
+  position: relative;
+}
+
+.lang-btn{
+  background: var(--orange-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lang-dropdown{
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: white;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  padding: 10px 0;
+  list-style: none;
+  width: 160px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.lang-dropdown li{
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.lang-dropdown li:hover{
+  background: #f5f5f5;
+  color: var(--orange-color);
+}
+
+/* show dropdown */
+.lang-switcher.active .lang-dropdown{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* hide google widget */
+#google_translate_element{
+  display: none;
+}
+
+/* remove top google bar */
+.goog-te-banner-frame.skiptranslate{
+  display: none !important;
+}
+
+body{
+  top: 0 !important;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
