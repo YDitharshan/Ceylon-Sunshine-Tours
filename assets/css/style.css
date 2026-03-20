@@ -185,6 +185,22 @@
   color: var(--text-color);
 }
 
+.nav__link.active{
+  color: var(--orange-color);
+  position: relative;
+}
+
+.nav__link.active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--orange-color);
+  border-radius: 2px;
+}
+
 /* LANGUAGE SWITCHER */
 
 .lang-switcher{
