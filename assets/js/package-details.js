@@ -9,7 +9,7 @@ function injectBlogsNavigation() {
   if (navList && !navList.querySelector('a[href="blogs.html"]')) {
     const blogItem = document.createElement("li");
     blogItem.className = "nav__item";
-    blogItem.innerHTML = '<a href="blogs.html" class="nav__link">Blogs</a>';
+    blogItem.innerHTML = '<a href="blogs.html" class="nav__link">Blog</a>';
 
     if (navList.lastElementChild) {
       navList.insertBefore(blogItem, navList.lastElementChild);
@@ -21,7 +21,7 @@ function injectBlogsNavigation() {
   if (sidebarList && !sidebarList.querySelector('a[href="blogs.html"]')) {
     const blogItem = document.createElement("li");
     blogItem.className = "sidebar__item";
-    blogItem.innerHTML = '<a href="blogs.html" class="sidebar__link">Blogs</a>';
+    blogItem.innerHTML = '<a href="blogs.html" class="sidebar__link">Blog</a>';
 
     if (sidebarList.lastElementChild) {
       sidebarList.insertBefore(blogItem, sidebarList.lastElementChild);
@@ -92,7 +92,7 @@ if (bookingForm) {
     const phoneNumber = "94761549030";
 
     const message =
-      `Hello Travilia, I want to book a tour.\n\n` +
+      `Hello Ceylon Sunshine Tours, I want to book a tour.\n\n` +
       `Full Name: ${nameValue}\n` +
       `Tour Package: ${packageValue}\n` +
       `Starting Date: ${dateValue}\n` +
