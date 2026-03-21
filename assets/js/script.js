@@ -234,6 +234,42 @@ window.addEventListener("load", () => {
   /* Promo */
   sr.reveal(".promo__text", { origin: "bottom", delay: 100 });
 
+  /* Blog Pages */
+  if (document.body.classList.contains("blog-page")) {
+    sr.reveal(".blog-hero__content", { origin: "left", delay: 120 });
+    sr.reveal(".blog-hero__visual", { origin: "right", delay: 220 });
+    sr.reveal(".blog-hero__highlights span, .blog-hero__actions > *", {
+      origin: "bottom",
+      interval: 90,
+      delay: 300
+    });
+    sr.reveal(".blog-hero__badge-card", { origin: "bottom", delay: 360 });
+
+    sr.reveal(".blog-section > .topic, .blog-section > h2", {
+      origin: "top",
+      interval: 90,
+      delay: 120
+    });
+    sr.reveal(".blog-section > p, .blog-list-title, .blog-note", {
+      origin: "bottom",
+      interval: 80,
+      delay: 160
+    });
+    sr.reveal(".blog-anchor-list a, .blog-checklist li, .blog-choice-list li", {
+      origin: "bottom",
+      interval: 80,
+      delay: 180
+    });
+    sr.reveal(".blog-card, .blog-library-card, .blog-place-card, .blog-season-card", {
+      origin: "bottom",
+      interval: 100,
+      delay: 200
+    });
+
+    sr.reveal(".blog-cta__content", { origin: "left", delay: 120 });
+    sr.reveal(".blog-cta__button", { origin: "right", delay: 220 });
+  }
+
   /* Footer */
   sr.reveal(".footer__header", { origin: "bottom", delay: 100 });
   sr.reveal(".footer__col", {
