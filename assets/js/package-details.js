@@ -1,4 +1,39 @@
 /* ====================
+   BLOGS NAV LINK
+==================== */
+
+function injectBlogsNavigation() {
+  const navList = document.querySelector(".nav__list");
+  const sidebarList = document.querySelector(".sidebar__list");
+
+  if (navList && !navList.querySelector('a[href="blogs.html"]')) {
+    const blogItem = document.createElement("li");
+    blogItem.className = "nav__item";
+    blogItem.innerHTML = '<a href="blogs.html" class="nav__link">Blogs</a>';
+
+    if (navList.lastElementChild) {
+      navList.insertBefore(blogItem, navList.lastElementChild);
+    } else {
+      navList.appendChild(blogItem);
+    }
+  }
+
+  if (sidebarList && !sidebarList.querySelector('a[href="blogs.html"]')) {
+    const blogItem = document.createElement("li");
+    blogItem.className = "sidebar__item";
+    blogItem.innerHTML = '<a href="blogs.html" class="sidebar__link">Blogs</a>';
+
+    if (sidebarList.lastElementChild) {
+      sidebarList.insertBefore(blogItem, sidebarList.lastElementChild);
+    } else {
+      sidebarList.appendChild(blogItem);
+    }
+  }
+}
+
+injectBlogsNavigation();
+
+/* ====================
    MOBILE MENU
 ==================== */
 

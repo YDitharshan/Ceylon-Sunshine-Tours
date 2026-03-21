@@ -1,4 +1,71 @@
 /*====================
+  BLOGS NAV LINK
+====================*/
+function injectBlogsNavigation() {
+  const isBlogPage = document.body.classList.contains("blog-page");
+  const navList = document.querySelector(".nav__list");
+  const sidebarList = document.querySelector(".sidebar__list");
+
+  if (navList) {
+    if (isBlogPage) {
+      navList.querySelectorAll(".nav__link--active").forEach((link) => {
+        link.classList.remove("nav__link--active");
+      });
+    }
+
+    let blogLink = navList.querySelector('a[href="blogs.html"]');
+
+    if (!blogLink) {
+      const blogItem = document.createElement("li");
+      blogItem.className = "nav__item";
+      blogItem.innerHTML = '<a href="blogs.html" class="nav__link">Blogs</a>';
+
+      if (navList.lastElementChild) {
+        navList.insertBefore(blogItem, navList.lastElementChild);
+      } else {
+        navList.appendChild(blogItem);
+      }
+
+      blogLink = blogItem.querySelector(".nav__link");
+    }
+
+    if (isBlogPage && blogLink) {
+      blogLink.classList.add("nav__link--active");
+    }
+  }
+
+  if (sidebarList) {
+    if (isBlogPage) {
+      sidebarList.querySelectorAll(".sidebar__link--active").forEach((link) => {
+        link.classList.remove("sidebar__link--active");
+      });
+    }
+
+    let blogSidebarLink = sidebarList.querySelector('a[href="blogs.html"]');
+
+    if (!blogSidebarLink) {
+      const blogSidebarItem = document.createElement("li");
+      blogSidebarItem.className = "sidebar__item";
+      blogSidebarItem.innerHTML = '<a href="blogs.html" class="sidebar__link">Blogs</a>';
+
+      if (sidebarList.lastElementChild) {
+        sidebarList.insertBefore(blogSidebarItem, sidebarList.lastElementChild);
+      } else {
+        sidebarList.appendChild(blogSidebarItem);
+      }
+
+      blogSidebarLink = blogSidebarItem.querySelector(".sidebar__link");
+    }
+
+    if (isBlogPage && blogSidebarLink) {
+      blogSidebarLink.classList.add("sidebar__link--active");
+    }
+  }
+}
+
+injectBlogsNavigation();
+
+/*====================
   MOBILE MENU
 ====================*/
 const menuIcon = document.getElementById("menu-icon");
@@ -176,3 +243,31 @@ window.addEventListener("load", () => {
   });
   
 });
+
+/*====================
+  EQUAL BLOG ITINERARY CARDS
+====================*/
+function syncEqualBlogCardHeights() {
+  const grids = document.querySelectorAll(".blog-place-grid--itinerary");
+
+  grids.forEach((grid) => {
+    const cards = Array.from(grid.querySelectorAll(".blog-place-card"));
+
+    if (!cards.length) return;
+
+    cards.forEach((card) => {
+      card.style.height = "";
+    });
+
+    if (window.innerWidth <= 900) return;
+
+    const maxHeight = Math.max(...cards.map((card) => card.offsetHeight));
+
+    cards.forEach((card) => {
+      card.style.height = `${maxHeight}px`;
+    });
+  });
+}
+
+window.addEventListener("load", syncEqualBlogCardHeights);
+window.addEventListener("resize", syncEqualBlogCardHeights);

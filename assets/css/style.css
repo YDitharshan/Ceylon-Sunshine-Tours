@@ -109,6 +109,10 @@
   color: var(--hover-color);
 }
 
+.nav__link--active {
+  color: var(--orange-color) !important;
+}
+
 .nav__item{
   position: relative;
 }
@@ -305,6 +309,11 @@ body{
 
 .sidebar__link {
   color: var(--title-color);
+}
+
+.sidebar__link--active {
+  color: var(--orange-color);
+  font-weight: var(--font-semi-bold);
 }
 
 .sidebar__dropdown {
