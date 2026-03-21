@@ -4,15 +4,21 @@ const langItems = document.querySelectorAll(".lang-dropdown li");
 const langBtn = document.getElementById("langToggle");
 
 const languageMap = {
-  en: "🌐 EN",
-  fr: "🇫🇷 FR",
-  de: "🇩🇪 DE",
-  ru: "🇷🇺 RU"
+  en: "\uD83C\uDF10 EN",
+  fr: "\uD83C\uDDEB\uD83C\uDDF7 FR",
+  de: "\uD83C\uDDE9\uD83C\uDDEA DE",
+  ru: "\uD83C\uDDF7\uD83C\uDDFA RU"
 };
+
+function ensureTranslateScript() {
+  if (typeof window.ensureGoogleTranslate === "function") {
+    window.ensureGoogleTranslate();
+  }
+}
 
 function setButtonLanguage(lang) {
   if (!langBtn) return;
-  langBtn.textContent = languageMap[lang] || "🌐 EN";
+  langBtn.textContent = languageMap[lang] || languageMap.en;
 }
 
 function forceTranslatedSectionsVisible() {
@@ -52,51 +58,56 @@ function forceTranslatedSectionsVisible() {
 }
 
 function applyLanguage(lang) {
-  const select = document.querySelector(".goog-te-combo");
-
-  if (!select) return false;
-
   if (lang === "en") {
-    // Reset to English (IMPORTANT FIX)
     document.cookie = "googtrans=/en/en;path=/";
-    location.reload(); // reload page to remove translation
+    window.location.reload();
     return true;
   }
+
+  const select = document.querySelector(".goog-te-combo");
+  if (!select) return false;
 
   select.value = lang;
   select.dispatchEvent(new Event("change"));
 
-  setTimeout(() => {
-    forceTranslatedSectionsVisible();
-  }, 1200);
-
+  window.setTimeout(forceTranslatedSectionsVisible, 1200);
   return true;
+}
+
+function scheduleLanguageApply(lang) {
+  if (lang !== "en") {
+    ensureTranslateScript();
+  }
+
+  let attempts = 0;
+  const timer = window.setInterval(() => {
+    const done = applyLanguage(lang);
+    attempts += 1;
+
+    if (done || attempts > 20) {
+      window.clearInterval(timer);
+    }
+  }, 500);
 }
 
 if (langToggle && langFloating) {
   langToggle.addEventListener("click", () => {
+    ensureTranslateScript();
     langFloating.classList.toggle("active");
   });
 }
 
 langItems.forEach((item) => {
   item.addEventListener("click", () => {
-    const lang = item.getAttribute("data-lang");
+    const lang = item.getAttribute("data-lang") || "en";
 
     setButtonLanguage(lang);
     localStorage.setItem("selectedLanguage", lang);
+    scheduleLanguageApply(lang);
 
-    let attempts = 0;
-    const timer = setInterval(() => {
-      const done = applyLanguage(lang);
-      attempts++;
-
-      if (done || attempts > 20) {
-        clearInterval(timer);
-      }
-    }, 500);
-
-    langFloating.classList.remove("active");
+    if (langFloating) {
+      langFloating.classList.remove("active");
+    }
   });
 });
 
@@ -111,14 +122,6 @@ window.addEventListener("load", () => {
   setButtonLanguage(savedLang);
 
   if (savedLang !== "en") {
-    let attempts = 0;
-    const timer = setInterval(() => {
-      const done = applyLanguage(savedLang);
-      attempts++;
-
-      if (done || attempts > 20) {
-        clearInterval(timer);
-      }
-    }, 500);
+    scheduleLanguageApply(savedLang);
   }
 });
