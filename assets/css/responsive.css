@@ -800,6 +800,16 @@
   }
 }
 
+@media (max-width: 768px){
+  .destination__title{
+    font-size: 1.8rem;
+  }
+
+  .destination__subtitle{
+    font-size: 14px;
+  }
+}
+
 /* ====================
       SEO INTRO
 ==================== */

@@ -141,7 +141,7 @@
 }
 
 .nav__dropdown-item {
-  padding: 8px 20px;
+  padding: 1px 20px;
 }
 
 .nav__dropdown-link{
@@ -1339,6 +1339,35 @@ body{
 .destination__price-btn:hover{
   background: #ff7a00;
   color: white;
+}
+
+.destination__header{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.destination__tag{
+  display: inline-block;
+  background: var(--orange-color);
+  color: var(--white-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.destination__title{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+  color: var(--title-color);
+  margin-bottom: 10px;
+}
+
+.destination__subtitle{
+  font-size: var(--normal-font-size);
+  color: var(--text-color-light);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 /* ====================
