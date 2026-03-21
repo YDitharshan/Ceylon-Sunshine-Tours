@@ -17,23 +17,40 @@
   <!--=============== CSS ===============-->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/translate.css">
 
   <title>Tour Jaffna - Ceylon Sunshine Tours</title>
 </head>
 <body>
 
-   <!--==================== 
+ <!--==================== 
            HEADER
   ====================-->
   <header id="header" class="header">
     <div class="header__wrapper">
       <div class="header__logo">
         <a href="index.html">
-        <img src="assets/images/logo1.png" alt="Travilia logo" class="header__logo-img">
+        <img src="assets/images/logo1.png" alt="Ceylon Sunshine Tours logo" class="header__logo-img">
         </a>
       </div>
 
       <div class="header__right">
+
+              <div class="lang-floating">
+                <button class="lang-btn" id="langToggle">
+                  🌐 EN
+                </button>
+
+                <ul class="lang-dropdown" id="langDropdown">
+                  <li data-lang="en">🇬🇧 English</li>
+                  <li data-lang="fr">🇫🇷 Français</li>
+                  <li data-lang="de">🇩🇪 Deutsch</li>
+                  <li data-lang="ru">🇷🇺 Русский</li>
+                </ul>
+              </div>
+
+              <div id="google_translate_element"></div>
+
         <div class="top__bar">
           <div class="top__bar-left">
             <span><i class="ri-map-pin-line"></i>Vipulananda Street, Pethalai, Batticaloa</span>
@@ -64,18 +81,24 @@
             <li class="nav__item">
               <a href="packages.html" class="nav__link">Tours<i class="ri-arrow-down-s-line"></i></a>
               <ul class="nav__dropdown">
-                <li class="nav__dropdown-item"><a href="sigiriya-dambulla-package-details.html" class="nav__dropdown-link">Sigiriya-Dumbulla</a></li>
+                <li class="nav__dropdown-item"><a href="sigiriya-dambulla-package-details.html" class="nav__dropdown-link">Sigiriya-Dambulla</a></li>
                 <li class="nav__dropdown-item"><a href="tour-ella-package-details.html" class="nav__dropdown-link">Ella</a></li>
+                <li class="nav__dropdown-item"><a href="yala-package-details.html" class="nav__dropdown-link">Yala Wild Jeep Safari</a></li>
+                <li class="nav__dropdown-item"><a href="habarana-package-details.html" class="nav__dropdown-link">Habarana Elephant Jeep Safari</a></li>
+                <li class="nav__dropdown-item"><a href="galle-package-details.html" class="nav__dropdown-link">Galle</a></li>
+                <li class="nav__dropdown-item"><a href="arugambay-package-details.html" class="nav__dropdown-link">Arugam Bay Beach</a></li>
+                <li class="nav__dropdown-item"><a href="ella-kandy-package-details.html" class="nav__dropdown-link">Ella-Kandy</a></li>
                 <li class="nav__dropdown-item"><a href="trinco-package-details.html" class="nav__dropdown-link">Trincomalee</a></li>
                 <li class="nav__dropdown-item"><a href="jaffna-package-details.html" class="nav__dropdown-link">Jaffna</a></li>
                 <li class="nav__dropdown-item"><a href="batticaloa-package-details.html" class="nav__dropdown-link">Batticaloa</a></li>
                 <li class="nav__dropdown-item"><a href="kandy-package-details.html" class="nav__dropdown-link">Kandy</a></li>
                 <li class="nav__dropdown-item"><a href="polonnaruwa.html" class="nav__dropdown-link">Polonnaruwa Ancient City</a></li>
+                <li class="nav__dropdown-item"><a href="valaichchenai-package-details.html" class="nav__dropdown-link">Valaichchenai City</a></li>
               </ul>
             </li>
 
             <li class="nav__item"><a href="packages.html" class="nav__link">Packages</a></li>
-            <li class="nav__item"><a href="contact-us.html" class="nav__link">Contact-Us</a></li>
+            <li class="nav__item"><a href="contact-us.html" class="nav__link">Contacts</a></li>
           </ul>
 
           <div class="right-content">
@@ -98,11 +121,13 @@
       </div>
     </div>
 
+    
+
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
       <div class="slidbar__header">
         <div class="sidebar__logo">
-          <img src="assets/images/logo2.png" alt="Travilia logo" class="sidebar__logo-img">
+          <img src="assets/images/logo2.png" alt="Ceylon Sunshine Tours logo" class="sidebar__logo-img">
         </div>
         <div class="close-icon" id="close-icon"><i class="ri-close-fill"></i></div>
       </div>
@@ -120,11 +145,11 @@
          </a>
 
           <a href="https://www.instagram.com/ceylon_sunshine_tours/" target="_blank">
-          <i class="ri-instagram-fill"></i>
-          </a>
+          <i class="ri-instagram-fill"></i></a>
       </div>
     </div>
   </header>
+
 
   <!--====================
        PACKAGE DETAILS
@@ -324,7 +349,7 @@ Explore the rich culture and history of Jaffna with Ceylon Sunshine Tours. Visit
   <footer class="footer" id="footer" style="background-image: url(assets/images/footer-bg.png);">
     <div class="footer__header">
       <div class="footer__logo">
-        <img src="assets/images/logo1.png" alt="Travilia logo">
+        <img src="assets/images/logo1.png" alt="Ceylon Sunshine Tours logo">
       </div>
       <div class="social__icons">
         <a href="https://www.facebook.com/profile.php?id=61579591383255"><i class="ri-facebook-fill"></i></a>
@@ -340,14 +365,16 @@ Explore the rich culture and history of Jaffna with Ceylon Sunshine Tours. Visit
                 <li><a href="about-us.html">About-Us</a></li>
                 <li><a href="packages.html">Packages</a></li>
                 <li><a href="packages.html">Tours</a></li>
-                <li><a href="contact-us.html">Conacts</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact-us.html">Contact us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__col-head">Tours</h4>
         <ul>
-                <li><a href="sigiriya-dambulla-package-details.html">Sigiriya-Dumbulla</a></li>
+                <li><a href="sigiriya-dambulla-package-details.html">Sigiriya-Dambulla</a></li>
                 <li><a href="tour-ella-package-details.html">Ella</a></li>
                 <li><a href="trinco-package-details.html">Trincomalee</a></li>
                 <li><a href="jaffna-package-details.html">Jaffna</a></li>
@@ -360,14 +387,14 @@ Explore the rich culture and history of Jaffna with Ceylon Sunshine Tours. Visit
       <div class="footer__col">
         <h4 class="footer__col-head">Contact</h4>
         <div class="contact__info">
-          <p><i class="ri-map-pin-line"> </i>Vipulananda Street, Pethalai, Batticaloa, Sri Lanka</p></i>
+          <p><i class="ri-map-pin-line"> </i>Vipulananda Street, Pethalai, Batticaloa, Sri Lanka</p>
           <a href="tel:+94761549030"><p><i class="ri-phone-line"></i> +94-761549030</p></a>
           <a href="mailto:ceylonsunshinetours@gmail.com"><p><i class="ri-mail-line"></i> ceylonsunshinetours@gmail.com</p></a>
         </div>
       </div>
 
       <div class="footer__col newsletter__box">
-        <h4 class="footer__col-head">Get Touch to US!!!</h4>
+        <h4 class="footer__col-head">Get in Touch With Us</h4>
 
         <form action="mailto:ceylonsunshinetours@gmail.com" method="post" enctype="text/plain">
           <input type="email" name="email" placeholder="Email address" required>
@@ -386,10 +413,28 @@ Explore the rich culture and history of Jaffna with Ceylon Sunshine Tours. Visit
     </div>
 
     <div class="footer__bottom">
-      Â© 2026 Copyrights by Ceylon Sunshine Tours. Design and Developed by Luna Tech.
+      © 2026 Copyrights by Ceylon Sunshine Tours. Design and Developed by Team - Luna Code.
     </div>
   </footer>
 
-  <script src="assets/js/package-details.js"></script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "en",
+    includedLanguages: "fr,de,ru",
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
+
+<script src="assets/js/translate-loader.js"></script>
+<script src="assets/js/translate.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  console.log("ScrollReveal check:", typeof ScrollReveal);
+</script>
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>

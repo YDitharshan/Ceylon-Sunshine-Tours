@@ -59,26 +59,33 @@
 </head>
 
 <body class="blog-page">
+ <!--==================== 
+           HEADER
+  ====================-->
   <header id="header" class="header">
     <div class="header__wrapper">
       <div class="header__logo">
         <a href="index.html">
-          <img src="assets/images/logo1.png" alt="Ceylon Sunshine Tours logo" class="header__logo-img">
+        <img src="assets/images/logo1.png" alt="Ceylon Sunshine Tours logo" class="header__logo-img">
         </a>
       </div>
 
       <div class="header__right">
-        <div class="lang-floating">
-          <button class="lang-btn" id="langToggle">EN</button>
 
-          <ul class="lang-dropdown" id="langDropdown">
-            <li data-lang="fr">French</li>
-            <li data-lang="de">German</li>
-            <li data-lang="ru">Russian</li>
-          </ul>
-        </div>
+              <div class="lang-floating">
+                <button class="lang-btn" id="langToggle">
+                  🌐 EN
+                </button>
 
-        <div id="google_translate_element"></div>
+                <ul class="lang-dropdown" id="langDropdown">
+                  <li data-lang="en">🇬🇧 English</li>
+                  <li data-lang="fr">🇫🇷 Français</li>
+                  <li data-lang="de">🇩🇪 Deutsch</li>
+                  <li data-lang="ru">🇷🇺 Русский</li>
+                </ul>
+              </div>
+
+              <div id="google_translate_element"></div>
 
         <div class="top__bar">
           <div class="top__bar-left">
@@ -90,13 +97,14 @@
 
           <div class="top__bar-right">
             <div class="top__bar-icons">
-              <a href="https://www.facebook.com/profile.php?id=61579591383255" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=61579591383255" target="_blank">
                 <i class="ri-facebook-circle-fill"></i>
-              </a>
+                </a>
 
-              <a href="https://www.instagram.com/ceylon_sunshine_tours/" target="_blank">
+                <a href="https://www.instagram.com/ceylon_sunshine_tours/" target="_blank">
                 <i class="ri-instagram-fill"></i>
-              </a>
+                </a>
+              
             </div>
           </div>
         </div>
@@ -111,15 +119,21 @@
               <ul class="nav__dropdown">
                 <li class="nav__dropdown-item"><a href="sigiriya-dambulla-package-details.html" class="nav__dropdown-link">Sigiriya-Dambulla</a></li>
                 <li class="nav__dropdown-item"><a href="tour-ella-package-details.html" class="nav__dropdown-link">Ella</a></li>
+                <li class="nav__dropdown-item"><a href="yala-package-details.html" class="nav__dropdown-link">Yala Wild Jeep Safari</a></li>
+                <li class="nav__dropdown-item"><a href="habarana-package-details.html" class="nav__dropdown-link">Habarana Elephant Jeep Safari</a></li>
+                <li class="nav__dropdown-item"><a href="galle-package-details.html" class="nav__dropdown-link">Galle</a></li>
+                <li class="nav__dropdown-item"><a href="arugambay-package-details.html" class="nav__dropdown-link">Arugam Bay Beach</a></li>
+                <li class="nav__dropdown-item"><a href="ella-kandy-package-details.html" class="nav__dropdown-link">Ella-Kandy</a></li>
                 <li class="nav__dropdown-item"><a href="trinco-package-details.html" class="nav__dropdown-link">Trincomalee</a></li>
                 <li class="nav__dropdown-item"><a href="jaffna-package-details.html" class="nav__dropdown-link">Jaffna</a></li>
                 <li class="nav__dropdown-item"><a href="batticaloa-package-details.html" class="nav__dropdown-link">Batticaloa</a></li>
                 <li class="nav__dropdown-item"><a href="kandy-package-details.html" class="nav__dropdown-link">Kandy</a></li>
                 <li class="nav__dropdown-item"><a href="polonnaruwa.html" class="nav__dropdown-link">Polonnaruwa Ancient City</a></li>
+                <li class="nav__dropdown-item"><a href="valaichchenai-package-details.html" class="nav__dropdown-link">Valaichchenai City</a></li>
               </ul>
             </li>
 
-            <li class="nav__item"><a href="packages.html" class="nav__link nav__link--active">Packages</a></li>
+            <li class="nav__item"><a href="packages.html" class="nav__link">Packages</a></li>
             <li class="nav__item"><a href="contact-us.html" class="nav__link">Contacts</a></li>
           </ul>
 
@@ -133,9 +147,9 @@
                 </a>
               </div>
             </div>
-            <a href="https://wa.me/94761549030" target="_blank">
-              <button class="btn">Start Booking</button>
-            </a>
+              <a href="https://wa.me/94761549030" target="_blank">
+                <button class="btn">Start Booking</button>
+              </a>
           </div>
 
           <div class="menu-icon" id="menu-icon"><i class="ri-menu-3-fill"></i></div>
@@ -143,6 +157,9 @@
       </div>
     </div>
 
+    
+
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
       <div class="slidbar__header">
         <div class="sidebar__logo">
@@ -150,7 +167,6 @@
         </div>
         <div class="close-icon" id="close-icon"><i class="ri-close-fill"></i></div>
       </div>
-
       <ul class="sidebar__list">
         <li class="sidebar__item"><a href="index.html" class="sidebar__link">Home</a></li>
         <li class="sidebar__item"><a href="about-us.html" class="sidebar__link">About Us</a></li>
@@ -160,16 +176,16 @@
       </ul>
 
       <div class="sidebar__socials">
-        <a href="https://www.facebook.com/profile.php?id=61579591383255" target="_blank">
-          <i class="ri-facebook-circle-fill"></i>
-        </a>
+         <a href="https://www.facebook.com/profile.php?id=61579591383255" target="_blank">
+         <i class="ri-facebook-circle-fill"></i>
+         </a>
 
-        <a href="https://www.instagram.com/ceylon_sunshine_tours/" target="_blank">
-          <i class="ri-instagram-fill"></i>
-        </a>
+          <a href="https://www.instagram.com/ceylon_sunshine_tours/" target="_blank">
+          <i class="ri-instagram-fill"></i></a>
       </div>
     </div>
   </header>
+
 
   <main class="blog-main">
     <section class="blog-hero section">
@@ -426,6 +442,9 @@
     </section>
   </main>
 
+  <!--====================
+           FOOTER
+  ====================-->
   <footer class="footer" id="footer" style="background-image: url(assets/images/footer-bg.png);">
     <div class="footer__header">
       <div class="footer__logo">
@@ -441,31 +460,33 @@
       <div class="footer__col">
         <h4 class="footer__col-head">Quick Link</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About-Us</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a href="packages.html">Tours</a></li>
-          <li><a href="contact-us.html">Contact us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About-Us</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="packages.html">Tours</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contact-us.html">Contact us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__col-head">Tours</h4>
         <ul>
-          <li><a href="sigiriya-dambulla-package-details.html">Sigiriya-Dambulla</a></li>
-          <li><a href="tour-ella-package-details.html">Ella</a></li>
-          <li><a href="trinco-package-details.html">Trincomalee</a></li>
-          <li><a href="jaffna-package-details.html">Jaffna</a></li>
-          <li><a href="batticaloa-package-details.html">Batticaloa</a></li>
-          <li><a href="kandy-package-details.html">Kandy</a></li>
-          <li><a href="polonnaruwa.html">Polonnaruwa Ancient City</a></li>
+                <li><a href="sigiriya-dambulla-package-details.html">Sigiriya-Dambulla</a></li>
+                <li><a href="tour-ella-package-details.html">Ella</a></li>
+                <li><a href="trinco-package-details.html">Trincomalee</a></li>
+                <li><a href="jaffna-package-details.html">Jaffna</a></li>
+                <li><a href="batticaloa-package-details.html">Batticaloa</a></li>
+                <li><a href="kandy-package-details.html">Kandy</a></li>
+                <li><a href="polonnaruwa.html">Polonnaruwa Ancient City</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__col-head">Contact</h4>
         <div class="contact__info">
-          <p><i class="ri-map-pin-line"></i>Vipulananda Street, Pethalai, Batticaloa, Sri Lanka</p>
+          <p><i class="ri-map-pin-line"> </i>Vipulananda Street, Pethalai, Batticaloa, Sri Lanka</p>
           <a href="tel:+94761549030"><p><i class="ri-phone-line"></i> +94-761549030</p></a>
           <a href="mailto:ceylonsunshinetours@gmail.com"><p><i class="ri-mail-line"></i> ceylonsunshinetours@gmail.com</p></a>
         </div>
@@ -491,24 +512,29 @@
     </div>
 
     <div class="footer__bottom">
-      &copy; 2026 Copyrights by Ceylon Sunshine Tours. Design and Developed by Luna Tech.
+      © 2026 Copyrights by Ceylon Sunshine Tours. Design and Developed by Team - Luna Code.
     </div>
   </footer>
 
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: "en",
-        includedLanguages: "fr,de,ru",
-        autoDisplay: false
-      }, "google_translate_element");
-    }
-  </script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "en",
+    includedLanguages: "fr,de,ru",
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
 
-  <script src="assets/js/translate-loader.js"></script>
-  <script src="assets/js/translate.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="assets/js/script.js"></script>
+<script src="assets/js/translate-loader.js"></script>
+<script src="assets/js/translate.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  console.log("ScrollReveal check:", typeof ScrollReveal);
+</script>
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
 
