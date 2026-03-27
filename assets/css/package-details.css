@@ -339,6 +339,7 @@ body {
 
 .package-info-card,
 .package-description,
+.package-seo-content,
 .package-includes,
 .package-excludes,
 .booking-card {
@@ -349,6 +350,7 @@ body {
 
 .package-info-card,
 .package-description,
+.package-seo-content,
 .package-includes,
 .package-excludes {
   padding: 30px;
@@ -380,6 +382,47 @@ body {
 .package-description p {
   line-height: 1.9;
   color: var(--text-color);
+}
+
+.package-seo-content {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  overflow: hidden;
+  border: 1px solid hsla(210, 45%, 35%, 0.08);
+  background:
+    radial-gradient(circle at top right, hsla(37, 89%, 53%, 0.18), transparent 34%),
+    linear-gradient(180deg, hsla(0, 0%, 100%, 1), hsla(210, 33%, 99%, 1));
+}
+
+.package-seo-content h2 {
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  line-height: 1.35;
+  color: var(--title-color);
+}
+
+.package-seo-content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 6px;
+  height: calc(100% - 0.3rem);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--orange-color), var(--blue-color));
+}
+
+.package-seo-content p {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.9;
+}
+
+.package-seo-content p + h2 {
+  margin-top: 8px;
 }
 
 .package-block-title {
@@ -673,6 +716,7 @@ body {
   .package-hero,
   .package-info-card,
   .package-description,
+  .package-seo-content,
   .package-includes,
   .package-excludes,
   .booking-card {
@@ -709,6 +753,7 @@ body {
 
   .package-info-card,
   .package-description,
+  .package-seo-content,
   .package-includes,
   .package-excludes,
   .booking-card {
@@ -773,6 +818,7 @@ body {
   }
 
   .package-description p,
+  .package-seo-content p,
   .package-list li,
   .package-hero__summary {
     font-size: 0.92rem;
